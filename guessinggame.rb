@@ -15,7 +15,12 @@ loop do
         4 - Difficile: chiffres de 1 à 500, 8 essais
         5 - Très difficile: chiffres de 1 à 1000, 9 essais")
     level = gets.to_i
-    puts("Vous avez choisi le niveau #{level}. Bon succès!")
+    if level < 1 or level > 5 then
+        puts("Vous devez choisir un niveau de difficulté entre 1 et 5.")
+        break
+    else
+        puts("Vous avez choisi le niveau #{level}. Bon succès!")
+    end
     winner = false
     guessTracker = 0
     noMoreGuess = false
